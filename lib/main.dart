@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+    // ToDo: implement build
 
     return const MaterialApp(home: OurApp());
   }
@@ -34,14 +34,16 @@ class OurApp extends StatelessWidget {
                 margin: const EdgeInsets.only(bottom: 10),
                 width: double.maxFinite,
                 height: 40,
-                decoration:
-                BoxDecoration(border: Border.all(color: Colors.black)),
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.black),
+                ),
                 child: Text(
                   'Badr Essalam Ben Hamida',
                   style: TextStyle(
-                      color: Colors.grey[700],
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600),
+                    color: Colors.grey[700],
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
               ),
 
@@ -53,15 +55,17 @@ class OurApp extends StatelessWidget {
                 width: double.maxFinite,
                 height: 180,
                 decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black),
-                    color: Colors.grey[300]),
+                  border: Border.all(color: Colors.black),
+                  color: Colors.grey[300],
+                ),
                 child: Text(
                   'To create a row or column in Flutter, you add a list of children widgets to a Row or Column widget. In turn, each child can itself be a row or column, and so on. The following example shows how it is possible to nest rows or columns inside of rows or columns.',
                   textAlign: TextAlign.justify,
                   style: TextStyle(
-                      color: Colors.grey[700],
-                      fontSize: 20,
-                      fontWeight: FontWeight.w400),
+                    color: Colors.grey[700],
+                    fontSize: 20,
+                    fontWeight: FontWeight.w400,
+                  ),
                 ),
               ),
 
@@ -73,12 +77,13 @@ class OurApp extends StatelessWidget {
                 width: 370,
                 height: 30,
                 decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black),
-                    color: Colors.grey[300]),
+                  border: Border.all(color: Colors.black),
+                  color: Colors.grey[300],
+                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Container(
+                    SizedBox(
                       width: 113,
                       height: 30,
                       // margin: const EdgeInsets.only(right: 20),
@@ -86,23 +91,25 @@ class OurApp extends StatelessWidget {
                         // padding: const EdgeInsets.only(left: 20),
                         scrollDirection: Axis.horizontal,
                         gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 1,
-                            childAspectRatio: 1,
-                            crossAxisSpacing: 0,
-                            mainAxisSpacing: 4,
-                            mainAxisExtent: 15),
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 1,
+                              childAspectRatio: 1,
+                              crossAxisSpacing: 0,
+                              mainAxisSpacing: 4,
+                              mainAxisExtent: 15,
+                            ),
                         itemCount: 5,
                         itemBuilder: (context, index) =>
-                        const Icon(Icons.star, size: 20),
+                            const Icon(Icons.star, size: 20),
                       ),
                     ),
                     Text(
                       '170 reviews',
                       style: TextStyle(
-                          color: Colors.grey[700],
-                          fontSize: 15,
-                          fontWeight: FontWeight.w600),
+                        color: Colors.grey[700],
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ],
                 ),
@@ -111,10 +118,11 @@ class OurApp extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 margin: const EdgeInsets.only(bottom: 10),
                 width: 370,
-                height: 80,
+                height: 86,
                 decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black),
-                    color: Colors.grey[300]),
+                  border: Border.all(color: Colors.black),
+                  color: Colors.grey[300],
+                ),
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -122,26 +130,26 @@ class OurApp extends StatelessWidget {
                       children: [
                         Icon(Icons.notes),
                         Text('PREP'),
-                        Text('\n25 min')
+                        Text('\n25 min'),
                       ],
                     ),
                     Column(
                       children: [
                         Icon(Icons.timer_outlined),
                         Text('COOK'),
-                        Text('\n1 hr')
+                        Text('\n1 hr'),
                       ],
                     ),
                     Column(
                       children: [
                         Icon(Icons.restaurant),
                         Text('FEEDS'),
-                        Text('\n4-5')
+                        Text('\n4-5'),
                       ],
-                    )
+                    ),
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),
